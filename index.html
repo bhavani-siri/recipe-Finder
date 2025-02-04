@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a recipe..." oninput="filterRecipes()">
+        <button id="save-favorites-btn" onclick="showFavorites()">Show Favorites</button>
+    </section>
+
+    <section class="filters">
+        <label for="category-select">Filter by Category:</label>
+        <select id="category-select" onchange="filterRecipes()">
+            <option value="">All</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="low-carb">Low-Carb</option>
+        </select>
+    </section>
+
+    <section class="recipes" id="recipe-list">
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
